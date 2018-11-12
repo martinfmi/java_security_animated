@@ -1,0 +1,12 @@
+In particular it performs checks such as:
+   - each loaded classfile has the correct format;
+   - access restrictions are not violated 
+   	(i.e. private methods are not accessible outside the class);
+   - local variables are used correctly within the method scope;
+   - final classes are not subclassed;
+   - final methods are not overriden;
+   - every class has a single superclass;
+   - there are no illegal data conversions;
+   - methods are called with proper number and type of arguments;
+   - methods return correct types;
+   - there are no operand stack overflows on underflows.

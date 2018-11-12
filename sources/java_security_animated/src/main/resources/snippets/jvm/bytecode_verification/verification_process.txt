@@ -1,0 +1,5 @@
+Before any classes are loaded from the compiled code
+the bytecode verifier is executed to ensure that 
+the rules defined by the Java Language Specification are met.
+The bytecode verifier analyses the methods individually by 
+means of control and data flow analysis.

@@ -15,7 +15,7 @@ public class MainFrame extends JFrame {
 	
 	public void init() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setSize(800, 600);
+		setSize(800, 650);
 
 		MainDisplayPanel display = new MainDisplayPanel();
 		display.init();

@@ -1,0 +1,10 @@
+A classloader is an instance of the java.lang.ClassLoader class.
+There might be custom classloaders defined that load certain components 
+of the application (i.e. managed environment like JavaEE or OSGi define such)
+or a JDK's built-in implementation (such as java.net.URLClassLoader) that loads 
+the classes, JAR files or other resources from the application's
+CLASSPATH or MODULEPATH (as of JDK 1.9).
+The java.net.URLClassLoader extends the java.security.SecureClassLoader 
+(introduced as of JDK 1.2) that leverages the access control 
+mechanism introduced by the Java sandbox model to further secure the process 
+of classloading.

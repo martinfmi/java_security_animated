@@ -1,0 +1,9 @@
+An additional point to make is that the protection domain 
+of loaded classes may also be amended with a set of principals 
+representing a JAAS subject but the secure classloader sets them to null
+during classloading (as its subclasses should do).
+The set of principals might be set during execution after the JAAS subject 
+corresponding to those principals has been successfully authenticated by 
+the application. It is the security policy file that determines the 
+access control based on a combination of the code source, set of principals 
+and signers of the code (refer to the section on Sandbox model and JAAS).
