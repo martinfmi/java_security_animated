@@ -1,0 +1,24 @@
+XML signatures is a w3 standard used to digital 
+signing along with verification capabilities for 
+XML documents or web resources identifiable by a URL.
+A XML signature block may have the following sample structure:
+ <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+  <SignedInfo>
+   <CanonicalizationMethod Algorithm="..."/>
+   <SignatureMethod Algorithm="..."/>
+   <Reference URI="">
+    <Transforms>
+     <Transform Algorithm="..."/>
+    </Transforms>
+    <DigestMethod Algorithm="..."/>
+    <DigestValue>...hash...</DigestValue>
+   </Reference>
+  </SignedInfo>
+  <SignatureValue>...hash... </SignatureValue>
+  <KeyInfo>
+   <X509Data>
+    <X509SubjectName>...X509 entry...</X509SubjectName>
+    <X509Certificate>...cert hash ...</X509Certificate>
+   </X509Data>
+  </KeyInfo>
+ </Signature>

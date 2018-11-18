@@ -1,0 +1,6 @@
+Permission checking can also be done without 
+a security manager installed using the 
+java.security.AccessController API as follows:
+SocketPermission permission =
+	new SocketPermission(“github.com:8000-9000", "connect,accept");
+AccessController.checkPermission(permission);

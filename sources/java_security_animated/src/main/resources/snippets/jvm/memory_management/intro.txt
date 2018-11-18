@@ -1,0 +1,6 @@
+Automatic memory management in Java not only provides means
+for more efficiency but also enhanced security.
+It reduces dramatically the possibility of conducting exploits 
+that make use of unhandled memory to inject malicious code
+which is the case for example with buffer overflow attacks
+(possible on a large scale in other languages like C++).

@@ -1,0 +1,7 @@
+JDK versions after 1.5 release introduce various 
+improvements and extensions on the API of the 
+security sandbox model but the core architecture remains 
+the same. Example of this improvements include LDAP support
+for JAAS and new methods in the java.security.AccessController
+class that provide the possibility to check only against a 
+certain subset of permissions.

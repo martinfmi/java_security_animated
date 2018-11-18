@@ -1,0 +1,11 @@
+The core classes of JAAS are: 
+    - javax.security.auth.Subject - represents 
+    an authenticated user
+    - java.security.Principal - a concrete representation
+    or characteristic of the authenticated subject
+    (i.e. an e-mail address, a username or an LDAP entry reference)
+    - javax.security.auth.spi.LoginModule - 
+    interface used to supply different login mechanisms. 
+    - javax.security.auth.login.LoginContext - 
+    the entry point to the JAAS system providing the ability to 
+    create objects used for authentication

@@ -1,0 +1,7 @@
+- execution of snippets
+- automated exercises
+- smoother transitioning between steps with more dynamic animations
+- fun games to illustrate some of the concepts
+- inclusion of more frameworks and libaries (like BouncyCastle) 
+- more involved topics and latest JDK enhancements (such as DTLS)
+- more tips and tricks

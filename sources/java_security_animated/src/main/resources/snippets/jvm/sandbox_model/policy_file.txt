@@ -1,0 +1,8 @@
+Permissions are defined in a security.policy file which by default 
+resides in the JDK installation and defines a simple DSL for 
+the definition of permissions. A simple policy entry that allows
+all classes of a JAR file to delete files from the C:\\Windows 
+directory is the following:
+grant codeBase file://some_file_path/lib.jar {
+    permission java.io.FilePermisions “C:\\Windows” “delete”
+} 

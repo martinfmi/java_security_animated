@@ -1,0 +1,6 @@
+On a much smaller scale exploits of the type system are possible
+due to JVM bugs, in particular in the bytecode verifier which 
+are dramatically reduced in latest JVM releases. Or there might 
+be trusted APIs (i.e. sun.misc.Unsafe) try provide mechanisms
+to bypass (and exploit) the Java type system. Some sources 
+refer to this type of attacks as type confusion.

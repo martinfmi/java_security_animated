@@ -1,10 +1,12 @@
 The java.security.SecureClassLoader has a twofold purpose:
    	- to provide a possibility to set the protection domain 
-   (an instance of java.security.ProtectionDomain) for the loaded classes.
-   The secure classloader sets the code source (location of where the class 
-   was loaded from) and the set of permissions (determined statically or dynamically)
+   (an instance of java.security.ProtectionDomain) for the 
+   loaded classes. The secure classloader sets the code source
+   (location of where the class was loaded from) 
+   and the set of permissions 
+   (determined statically or dynamically)
    as defined over the code source in the security policy file 
-   (see section about Sandbox Model).
-   	- to provide access control checks that classloading is allowed 
-   by the executing code.
+   (see section about Sandbox Model);
+   	- to provide access control checks that 
+   	classloading is allowed by the executing code.
    

@@ -1,0 +1,6 @@
+PKI utilities provide means for working with:
+    - certificates;
+    - certificate revocation lists (CRL);
+    - OCSP (Online Certificate Status Protocol)
+    - key stores and trust stores (also based on 
+    the PKCS - public-key cryptography standards)

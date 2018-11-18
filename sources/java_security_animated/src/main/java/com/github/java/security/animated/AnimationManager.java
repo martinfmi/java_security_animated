@@ -1,7 +1,6 @@
 package com.github.java.security.animated;
 
 import java.awt.Graphics;
-import java.util.LinkedList;
 import java.util.function.BiConsumer;
 
 import javax.swing.Timer;
@@ -10,7 +9,7 @@ import com.github.java.security.animated.controllers.BaseController;
 
 public final class AnimationManager {
 
-	protected int delay = 3000;
+	protected int delay = 7000;
 	
 	private Timer animationTimer;
 

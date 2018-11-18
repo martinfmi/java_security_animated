@@ -1,0 +1,10 @@
+The Java Authentication and Authorization service 
+release with JDK 1.4 provides a mechanism to 
+programmatically authenticate users in Java applications 
+and assign them privileges. As mentioned in the 
+Security Sandbox section it is the JAAS authorization
+feature that extends the syntax of the security.policy
+file with the possibility to assign permissions to 
+the principals of a JAAS subject being authenticated.
+The authentication part provides a pluggable 
+authentication module (PAM) framework.

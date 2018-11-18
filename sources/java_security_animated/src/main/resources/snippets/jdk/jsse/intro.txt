@@ -1,0 +1,11 @@
+The TLS/SSL series of protocols are used to secure most types 
+of network communication and also provide means for the creation of
+SSL VPN connections. 
+JSSE provides an implementation of the TSL/SSL series of protocols. 
+It provides two models of operation:
+    - blocking - implemented by means of TLS/SSL sockets
+    and works in a similar manner as standard Java sockets;
+    - non-blocking mode of operations - much more complex 
+    to use.
+Up to JDK 9 TLS 1.0, 1.1 and 1.2 are supported via the JSSE API.
+TLS 1.3 is supported as of JDK 11.

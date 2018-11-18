@@ -1,0 +1,5 @@
+Applications that make use of JNI or  
+off-heap memory in particular might still be vulnerable 
+to memory-related exploits. On a smaller scale this could be
+possible due to bugs in native JVM memory usage or 
+JIT compilation.

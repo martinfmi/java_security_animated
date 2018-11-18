@@ -1,0 +1,9 @@
+The Java Cryptography architecture has a pluggable architecture
+that allows different providers (either built in the JDK or 
+third-party) to provide different implementations of 
+cryptographic algorithms. JCA provides utilities for:
+    - creating digital signatures;
+    - creating message digests;
+    - using cryptographic ciphers (symetric/asymetric, block/stream);
+    - using different other types of cryptographic services 
+    and algorithms.

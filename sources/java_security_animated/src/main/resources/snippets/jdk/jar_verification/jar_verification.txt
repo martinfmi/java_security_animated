@@ -1,0 +1,5 @@
+JAR verification is simply the process of verifying
+that a signed JAR is not tampered with. 
+To verify the signed JAR you
+can run the following command:
+jarsigner -verify lib.jar

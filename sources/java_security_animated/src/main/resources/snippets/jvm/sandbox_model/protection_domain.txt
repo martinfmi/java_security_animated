@@ -1,0 +1,10 @@
+The protection domain for each loaded class is set by 
+the classloader(s) of the application. It encapsulates 
+the code source (location of where the class is loaded 
+such as an HTTP URL or a location on the local file system),
+the set of permissions that apply for the target class and 
+the set of principals that correspond to a logged in user 
+and to which the target class is accessible. To get the 
+protection domain for a class you can invoke the 
+getProtectionDomain() 
+method on the class instance.

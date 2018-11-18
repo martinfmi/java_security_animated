@@ -1,0 +1,9 @@
+There are two rules which apply for security policy files:
+	- one permission can imply another
+	(e.g. permission java.io.FilePermisions “C:\\Windows” “delete”
+	implies 
+	permission java.io.FilePermisions “C:\\Windows\system32” “delete”
+	 - one code source my imply another code source for which a set of
+	 permissions apply
+	 (e.g. "C:\\projects\libs" implies "C:\\projects\libs\\third-party")
+	 

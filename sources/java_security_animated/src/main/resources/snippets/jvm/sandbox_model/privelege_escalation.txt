@@ -1,0 +1,10 @@
+The sandbox model also provides the possibility 
+to escalate privileges of the currently executing code,
+to switch the current user for the current execution context
+or to combine both using the following methods:
+java.security.AccessController.doPriveleged()
+javax.security.auth.Subject.doAs()
+javax.security.auth.Subject.doAsPriveleged()
+During privilege escalation only the part of the 
+current call stack starting from the point of 
+calling doPriveleged() is a point for permissions checking.

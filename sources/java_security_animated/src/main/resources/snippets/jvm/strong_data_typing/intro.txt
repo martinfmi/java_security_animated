@@ -1,0 +1,10 @@
+The type system defined in the Java programming language 
+is considered strongly types based on two pillars:
+   - variable types must be specified explicitly. 
+   In that regard the Java compiler and bytecode verified
+   can enforce some checks for type compatibility.
+   - in case the previous cannot be deducted statically it is
+   the JVM that enforces type checking based on set of rules
+In that regard exploits trying to call operations on different 
+objects (trying to make use of weaker constraints) 
+are not possible.

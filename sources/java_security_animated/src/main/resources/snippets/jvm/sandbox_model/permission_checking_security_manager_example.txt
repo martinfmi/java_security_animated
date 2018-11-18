@@ -1,0 +1,12 @@
+For example if we want to check if we can create or accept
+connections to github.com on ports between 8000 and 9000 
+we might do the following:
+SocketPermission permission = 
+	new SocketPermission(“github.com:8000-9000","connect,accept");
+SecurityManager sm = System.getSecurityManager();
+if (sm != null) sm.checkPermission(permission);
+We first check if a security manager is installed and if that is the 
+case we invoke the checkPermission() method that traverses the 
+current call stack and checks if all classes in the stack have 
+the target permission. 
+If that is not the case a security exception is thrown.

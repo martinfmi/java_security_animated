@@ -1,0 +1,10 @@
+The Java security sandbox model has been created to 
+address the issue of loading and executing untrusted code 
+such as Java applets on a client environment such as 
+the user's browser. Over the years this model was applied 
+successfully to provide access control capabilities to 
+different managed environments like JavaEE and OSGi or 
+even in other environments like Oracle RDBMS to provide 
+access control for Java stored procedures executed by the 
+RDBMS. Latest JDK release still depend entirely on this 
+security model which was shaped as early as JDK 1.2

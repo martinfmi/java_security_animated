@@ -1,0 +1,4 @@
+Java GSS API provides an alternative of JSSE 
+for secure communication. It is a framework 
+for providing token-based security services 
+that is independent of the underlying protocols.

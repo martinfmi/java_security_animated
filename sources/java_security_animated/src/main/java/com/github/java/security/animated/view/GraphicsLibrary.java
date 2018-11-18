@@ -25,13 +25,19 @@ public class GraphicsLibrary {
 
 	public static final Color COLOR_LIGHT_BLUE = new Color(137, 207, 240);
 	
+	public static final String IMAGE_PATH_ECLIPSE = "/logos/eclipse.png";
+
+	public static final String IMAGE_PATH_NETBEANS = "/logos/netbeans.png";
+
+	public static final String IMAGE_PATH_IDEA = "/logos/idea.png";
+	
 	public static void drawJVMDiagram(Graphics graphics) {
 
 		Graphics2D g2 = (Graphics2D) graphics;
 
 		Rectangle os = new Rectangle(380, 500, 300, 40);
 		Rectangle jvm = new Rectangle(405, 430, 250, 70);
-
+		
 		g2.draw(os);
 		g2.drawString("OS", 510, 525);
 		g2.draw(jvm);

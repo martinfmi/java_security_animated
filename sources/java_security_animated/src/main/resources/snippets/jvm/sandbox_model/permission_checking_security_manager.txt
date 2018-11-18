@@ -1,0 +1,9 @@
+In many places the JDK does permission checking in order
+to check that the currently executing code has the 
+permission to call a certain API in case a 
+security manage is installed. This is also done 
+extensively by managed environments like JavaEE
+in order to grant proper access to deployed applications.
+During permission checking the security.policy file
+is consulted in order to determine the set of 
+permissions for the currently executing source code.

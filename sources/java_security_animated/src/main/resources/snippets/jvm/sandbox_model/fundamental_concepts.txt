@@ -1,0 +1,12 @@
+The two main APIs that are used to enforce the 
+Java security sandbox model are java.lang.SecurityManager and
+java.security.AccessController. The later is a newer API and 
+the default java.lang.SecurityManager operations delegate to the 
+java.security.AccessController API methods which are static and can
+be called directly without having to create an instance of 
+access controller. A java.lang.SecurityManager instance on the 
+other hand needs to be installed in the JVM either:
+	- programaically by calling System.setSecurityManager()
+	typically at the startup of the application;
+	- by setting the java.security.manager parameter.
+By default a security manager is not installed.

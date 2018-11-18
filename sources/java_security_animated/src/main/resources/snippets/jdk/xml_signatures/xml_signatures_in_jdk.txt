@@ -1,0 +1,15 @@
+The XML digital signature API introduced in JDK 6 
+provides an implementation of the standard for Java.
+Signing and verification are in a way similar to 
+JAR signing and verification in a way that signature informaion 
+is embedded withing the signed XML document (as it is with signed
+JAR files). The process of generating a XML signature
+using the API is as follows:
+    - an instance of javax.xml.crypto.disg.XMLSignatureFactory 
+    is used to create reference to the document or block to be signed
+    and a signing info used during the signing process;
+    - digital certificate is retrieved and wrapped in a 
+    javax.xml.crypto.dsig.keyinfo.KeyInfo object;
+    - the document to be signed is parsed and signed 
+    using the created signing info and key info.
+    

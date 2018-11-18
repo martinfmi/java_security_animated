@@ -1,0 +1,5 @@
+Java SASL defines a protocol for the exchange 
+and negotiation of authentication data.
+It is a framework where external providers 
+give concrete semantics to the authentication data 
+being exchanged.

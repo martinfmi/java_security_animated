@@ -1,0 +1,9 @@
+Before parties can start exchanging messages 
+in a secure manner TLS handshake must be established. 
+It is required in order to negotiate the type of 
+information they are going to use in order to 
+establish the secure communication channel.
+A handshake can be triggered in several ways such as
+trying to read/write to a TLS socket, trying to get 
+the current TLS session from the socket or explicitly
+calling the startHandshake() method on the socket.

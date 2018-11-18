@@ -14,8 +14,8 @@ import java.util.function.BiConsumer;
 import com.github.java.security.animated.util.SnippetUtil;
 import com.github.java.security.animated.view.MainDisplayPanel;
 
-public abstract class BaseController implements ActionListener {
 
+public abstract class BaseController implements ActionListener {
 	private static final int MARGIN_SIZE = 20;
 
 	private static final Color HIGHLIGHT_COLOR = Color.BLUE;

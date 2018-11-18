@@ -1,0 +1,10 @@
+In JDK 1.9 when a new module system is introduced in the JDK
+under the name of the project Jigsaw the security sandbox model
+still remains the same. It is extended to support access control
+over Jigsaw modules using the 'jrt' protocol specified as the 
+code source for runtime modules installed in the JDK. For example:
+grant codeBase "jrt:/java.security.animated" {
+    permission java.io.FilePermisions “C:\\Windows” “delete”
+}
+The above example grants the specified file permission to 
+the 'java.security.animated' runtime module.

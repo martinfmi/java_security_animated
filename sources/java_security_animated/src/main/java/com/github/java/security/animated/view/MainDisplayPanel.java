@@ -3,6 +3,8 @@ package com.github.java.security.animated.view;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Font;
+import java.awt.Graphics;
 import java.net.MalformedURLException;
 import java.net.URISyntaxException;
 import java.net.URL;
@@ -42,7 +44,17 @@ public class MainDisplayPanel extends JPanel {
 
 		createAnimationButtons();
 	}
-
+	
+	public void createWelcomeScreen() {
+		Graphics graphics = getGraphics();
+		graphics.setFont(new Font("Arial", Font.BOLD, 30)); 
+		graphics.drawString("Java Security Animated", 350, 200);
+		graphics.setFont(new Font("Arial", Font.PLAIN, 15)); 
+		graphics.setColor(Color.GRAY);
+		graphics.drawString("Martin Toshev (@martin_fmi)", 420, 230);
+		graphics.setColor(Color.BLACK);
+	}
+	
 	private void createAnimationButtons() {
 		try {
 			playIconURL = MainDisplayPanel.class.getResource("/icons/play.png").toURI().toURL();

@@ -1,0 +1,12 @@
+As of JDK 1.4 the Java Authenication and Authorization Service
+(JAAS) extends the sandbox model and the syntax of security.policy
+file with the possibilty to specify permissions based on attributes
+(principals) of the currently authenticated user. For example:
+grant principal javax.security.auth.x500.X500Principal "cn=Tom" 
+{ 
+    permission java.io.FilePermissions “C:\\Windows” “delete” 
+} 
+If a user has been authenticated against an X500 server and has a 
+'cn' attribute with value 'Tom' he gets the permission to delete
+the C:\\Windows folder. Refer to the JAAS section for 
+further information.

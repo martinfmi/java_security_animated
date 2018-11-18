@@ -1,0 +1,11 @@
+JAR signing provides a 
+mechanism for securing JAR files using digital signatures. 
+In order to sign the lib.jar file with a private key corresponding 
+to the 'cert' alias you may use the jarsigner utility as follows:
+jarsigner lib.jar cert
+The above command will use the default .keystore file 
+located in the user's home directory in order to 
+retrieve the private key corresponding to the alias
+and will also override the lib.jar with a signed version of it.
+In order to specify a different name for the signed JAR you
+can use the -signedjar option. 
