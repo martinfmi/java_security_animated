@@ -13,7 +13,7 @@ public class Application {
 	private static final Logger LOGGER = Logger.getLogger(Application.class.getName());
 
 	public static void main(String[] args) {
-
+		
 		SwingUtilities.invokeLater(new Runnable() {
 			public void run() {
 				MainFrame frame = new MainFrame();

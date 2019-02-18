@@ -3,6 +3,7 @@ package com.github.java.security.animated.view;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.net.MalformedURLException;
@@ -13,8 +14,10 @@ import java.util.logging.Logger;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+import com.github.java.security.animated.listeners.ExecuteListener;
 import com.github.java.security.animated.listeners.NextListener;
 import com.github.java.security.animated.listeners.PlayPauseListener;
 import com.github.java.security.animated.listeners.PrevListener;
@@ -29,6 +32,8 @@ public class MainDisplayPanel extends JPanel {
 
 	private JPanel animationButtonsPanel;
 
+	private JButton executeButton;
+	
 	URL playIconURL;
 	
 	URL pauseIconURL;
@@ -36,6 +41,16 @@ public class MainDisplayPanel extends JPanel {
 	URL prevIconURL;
 	
 	URL nextIconURL;
+
+	private JFrame frame;
+	
+	public MainDisplayPanel(JFrame frame) {
+		this.frame = frame;
+	}	
+	
+	public JFrame getFrame() {
+		return frame;
+	}
 	
 	public void init() {
 		setSize(550, 600);
@@ -50,8 +65,8 @@ public class MainDisplayPanel extends JPanel {
 		graphics.setFont(new Font("Arial", Font.BOLD, 30)); 
 		graphics.drawString("Java Security Animated", 350, 200);
 		graphics.setFont(new Font("Arial", Font.PLAIN, 15)); 
-		graphics.setColor(Color.GRAY);
-		graphics.drawString("Martin Toshev (@martin_fmi)", 420, 230);
+//		graphics.setColor(Color.GRAY);
+//		graphics.drawString("Martin Toshev (@martin_fmi)", 420, 230);
 		graphics.setColor(Color.BLACK);
 	}
 	
@@ -70,16 +85,24 @@ public class MainDisplayPanel extends JPanel {
 			pause.setBackground(Color.WHITE);
 			JButton next = new JButton(new ImageIcon(nextIconURL));
 			next.setBackground(Color.WHITE);
+			JButton executeButton = new JButton("Execute");
+			executeButton.setBackground(Color.GREEN);
+			executeButton.setVisible(false);
+			executeButton.addActionListener(new ExecuteListener());
+			this.executeButton = executeButton;
 			
 			PlayPauseListener playPauseListener = new PlayPauseListener(pause, playIconURL, pauseIconURL);
 			pause.addActionListener(playPauseListener);
 			prev.addActionListener(new PrevListener(playPauseListener));
 			next.addActionListener(new NextListener(playPauseListener));
-			
+			animationButtonsPanel.setLayout(new FlowLayout(FlowLayout.RIGHT));
+			animationButtonsPanel.add(executeButton);
 			animationButtonsPanel.add(prev);
 			animationButtonsPanel.add(pause);
 			animationButtonsPanel.add(next);
+			
 			add(animationButtonsPanel, BorderLayout.SOUTH);
+			
 			animationButtonsPanel.setVisible(false);
 		} catch (MalformedURLException | URISyntaxException e) {
 			LOGGER.log(Level.SEVERE, e.getMessage(), e);
@@ -94,4 +117,8 @@ public class MainDisplayPanel extends JPanel {
 		}
 	}
 
+	public void showExecutableButton(boolean flag) {
+		executeButton.setVisible(flag);
+	}
+	
 }

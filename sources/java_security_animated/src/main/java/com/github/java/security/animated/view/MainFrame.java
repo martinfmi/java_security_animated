@@ -7,6 +7,8 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.JFrame;
 
+import com.github.java.security.animated.util.Helper;
+
 public class MainFrame extends JFrame {
 	
 	private static final long serialVersionUID = -644658116657662883L;
@@ -19,7 +21,9 @@ public class MainFrame extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setSize(800, 650);
 
-		MainDisplayPanel display = new MainDisplayPanel();
+		Helper.mainFrame = this;
+		
+		MainDisplayPanel display = new MainDisplayPanel(this);
 		display.init();
 		
 		MainMenuPanel menu = new MainMenuPanel(display);

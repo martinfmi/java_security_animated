@@ -1,13 +1,15 @@
-The following example creates a simple JSSE client:
-System.setProperty("javax.net.ssl.trustStore", "sample.pfx");
+// The following example creates a simple JSSE client:
+System.out.println("Starting JSSE client");
+JDialog dialog = Helper.createDialog("JSSE client", "Starting JSSE client ...");
+System.setProperty("javax.net.ssl.trustStore", 
+	"C:/Users/Martin/sample.pfx");
 System.setProperty("javax.net.ssl.trustStorePassword", "sample");
-SSLSocketFactory ssf = 
-    (SSLSocketFactory) SSLSocketFactory.getDefault();
-Socket s = ssf.createSocket("127.0.0.1", 4444);
+SSLSocketFactory ssf = (SSLSocketFactory) SSLSocketFactory.getDefault();
+Socket s = ssf.createSocket("127.0.0.1", 4445);
 PrintWriter out = new PrintWriter(s.getOutputStream(), true);
 out.println("Hi, server.");
 BufferedReader in = 
     new BufferedReader(new InputStreamReader(s.getInputStream()));
 String x = in.readLine();
-System.out.println(x);
+Helper.appendText(dialog, x);
 out.close(); in.close(); s.close();

@@ -1,8 +1,6 @@
 package com.github.java.security.animated.controllers;
 
-import java.awt.Font;
 import java.awt.Graphics;
-import java.awt.GraphicsEnvironment;
 import java.awt.event.ActionEvent;
 
 import com.github.java.security.animated.view.MainDisplayPanel;

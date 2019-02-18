@@ -22,6 +22,8 @@ public abstract class BaseController implements ActionListener {
 
 	private static Font SNIPPET_FONT = new Font("Monaco", Font.PLAIN, 14);
 
+	public static String currentSnippetPath;
+	
 	protected MainDisplayPanel displayPanel;
 	
 	private TextLayout[] snippetLines;
@@ -91,6 +93,7 @@ public abstract class BaseController implements ActionListener {
 		if (currentStepIndex + 1 < steps.size()) {
 			currentStepIndex++;
 			BiConsumer<Graphics, BaseController> next = steps.get(currentStepIndex);
+			displayPanel.showExecutableButton(false);
 			next.accept(displayPanel.getGraphics(), this);
 		}
 	}

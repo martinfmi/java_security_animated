@@ -1,16 +1,17 @@
-The following example creates a simple JSSE server:
-System.setProperty("javax.net.ssl.keyStore", "sample.pfx");
+// The following example creates a simple JSSE server:
+System.out.println("Starting JSSE server");
+JDialog dialog = Helper.createDialog("JSSE server", "Starting JSSE server ...");
+System.setProperty("javax.net.ssl.keyStore", 
+	"C:/Users/Martin/sample.pfx");
 System.setProperty("javax.net.ssl.keyStorePassword", "sample");
-SSLServerSocketFactory ssf = 
-    (SSLServerSocketFactory) SSLServerSocketFactory.getDefault();
-ServerSocket ss = ssf.createServerSocket(4444);
-while (true) {
-    Socket s = ss.accept();
-    BufferedReader in = 
-    new BufferedReader(new InputStreamReader(s.getInputStream()));
-    PrintStream out = new PrintStream(s.getOutputStream());
-    String line = null;
-    while (((line = in.readLine()) != null)) 
-        { System.out.println(line); out.println("Hi, client"); }
-    in.close(); out.close(); s.close();
-}
+SSLServerSocketFactory ssf = (SSLServerSocketFactory) SSLServerSocketFactory.getDefault();
+ServerSocket ss = ssf.createServerSocket(4445);
+Socket s = ss.accept();
+BufferedReader in = 
+	new BufferedReader(new InputStreamReader(s.getInputStream()));
+PrintStream out = new PrintStream(s.getOutputStream());
+String line = null;
+while (((line = in.readLine()) != null)) 
+        { Helper.appendText(dialog, line); 
+        out.println("Hi, client"); }
+in.close(); out.close(); s.close();
